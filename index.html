@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tholkappiyan's Portfolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <script>
+  // Mobile navigation collapse after click
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link.js-scroll');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // If navbar is expanded (mobile view)
+        if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+          // Trigger click on toggler to collapse the menu
+          navbarToggler.click();
+        }
+      });
+    });
+    
+    // Smooth scrolling for all links
+    document.querySelectorAll('a.js-scroll[href*="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- JavaScript Libraries CDN (Optimized) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your Custom Script -->
+<script src="js/main.js"></script>
+
+
+  <!-- Libraries CSS CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!--/ Nav Start /-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">
+            <img src="img/t-logo.png" alt="T Logo" class="t-logo-round">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Interest</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll" href="#certificates">Certificates</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Projects</a>
+            </li>
+            <li class="nav-item">
+            <a href="#tholk-contact" class="nav-link js-scroll active-link">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <!--/ Nav End /-->
+
+    <!-- Intro Section -->
+    <div id="home" class="intro route bg-image" style="background-image:url('6.png'); background-position:95%;">
+        <div class="overlay-itro"></div>
+        <div class="intro-content display-table">
+                <div class="table-cell">
+                <div class="intro-container text-left">
+                    <div>
+                    <h1 class="intro-title animate__animated animate__fadeInLeft">
+                        Hey, I'm <span class="name-highlight">Tholkappiyan</span>
+                    </h1>
+                    <p class="intro-subtitle animate__animated animate__fadeInLeft">
+                        <span id="typed"></span>
+                    </p>
+                    </div>
+                </div>
+                </div>
+       </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+    <div class="container">
+        <div class="about-content">
+        <!-- Profile Picture and Basic Info -->
+        <div class="profile-section">
+            <div class="profile-image">
+            <img src="img/THOL.jpg" alt="Tholkappiyan's Profile Picture" class="img-fluid">
+            </div>
+            <div class="profile-info">
+            <h2>Tholkappiyan.J</h2>
+            <p><i class="fas fa-envelope"></i> jtkappiyan2003@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 6380161503</p>
+            <p><i class="fas fa-map-marker-alt"></i> Kumbakonam, Tamil Nadu</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/J-Tholkappiyan" target="_blank">GitHub Profile</a></p> <!-- GitHub Profile -->
+            <a href="(THOLKAPPIYAN J).pdf" class="btn-download" download target="_blank">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            </div>
+        </div>
+
+        <!-- About Me and Skills -->
+        <div class="about-details">
+            <div class="about-me">
+                    <h3>About Me :</h3>
+                    <p>
+                        I am currently pursuing an M.Sc. in Computer Science at SASTRA University with a CGPA of 8.0, following my B.Sc. in Mathematics with Computer Applications. My academic background has equipped me with strong analytical and problem-solving skills.
+                    </p>
+                    <p>
+                        I have hands-on experience in web technologies such as HTML, CSS, Bootstrap, and JavaScript (including JSON and jQuery). Additionally, I am proficient in programming languages like Java, Python, and .NET. One of my key projects includes a responsive Permutation and Combination Quiz, demonstrating my ability to develop interactive web applications. I have successfully completed an internship in Python Programming at CodSoft and another internship in Java Programming at InternPe, which further strengthened my practical knowledge and coding skills.
+                    </p>
+                    <p>
+                        I have also completed a Full Stack Development course and an English Senior Grade Typewriting certification, showcasing my commitment to continuous learning. My technical skills are complemented by personal strengths in teamwork, time management, and leadership, which I have applied in various academic and professional settings.
+                    </p>
+            </div>
+
+           <!-- Skills Section -->
+<div class="skills-section">
+    <h3>Skills :</h3>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
+            <span>HTML5</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-css3-alt skill-icon" style="color: #2965f1;"></i>
+            <span>CSS3</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+            <span>JavaScript</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-java skill-icon" style="color: #007396;"></i>
+            <span>Java</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-python skill-icon" style="color: #3776ab;"></i>
+            <span>Python</span>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-database skill-icon" style="color: #4479a1;"></i>
+            <span>MySQL</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-bootstrap skill-icon" style="color: #7952b3;"></i>
+            <span>Bootstrap</span>
+        </div>
+        <div class="skill-item">
+            <i class="fab fa-git-alt skill-icon" style="color: #f05032;"></i>
+            <span>Git</span>
+        </div>
+    </div>
+</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="services-mf route">
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+            <div class="title-box text-center">
+            <h3 class="title-a">
+                Interest
+            </h3>
+            <p class="subtitle-a">
+                What I love to do.
+            </p>
+            <div class="line-mf"></div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-box animate__animated animate__fadeInLeft">
+                <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-monitor"></i></span>
+                </div>
+                <div class="service-content">
+                    <h2 class="s-title">Web Design</h2>
+                    <p class="s-description text-center">
+                    Crafting beautiful and responsive designs that captivate users.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box animate__animated animate__fadeInUp">
+                <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-code-working"></i></span>
+                </div>
+                <div class="service-content">
+                    <h2 class="s-title">Web Development</h2>
+                    <p class="s-description text-center">
+                    Building dynamic and interactive web applications.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+             <div class="service-box animate__animated animate__fadeInLeft">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+                    </div>
+                <div class="service-content">
+                    <h2 class="s-title">Flutter Apps</h2>
+                    <p class="s-description text-center">
+                        Building beautiful cross-platform mobile applications with Flutter.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!--/ Services Section End /-->
+<!-- Certificates Section -->
+<section id="certificates" class="certificates-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Certificates & Achievements</h3>
+          <p class="subtitle-a">My professional development journey</p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- Certificate Filter Buttons -->
+      <div class="col-12 mb-5">
+        <div class="certificate-filters text-center">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="internship">Internships</button>
+          <button class="filter-btn" data-filter="course">Courses</button>
+          <button class="filter-btn" data-filter="achievement">Achievements</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row certificate-container">
+      <!-- Internship Certificates -->
+      <div class="col-md-4 certificate-item" data-category="internship">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/CODSOFT.jpg" alt="Internship Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Python Programming</h4>
+            <p class="certificate-org">CODSOFT</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="internship">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/INTERNPE.jpg" alt="Internship Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Java Programming</h4>
+            <p class="certificate-org">INTERNPE</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Course Certificates -->
+      <!-- <div class="col-md-4 certificate-item" data-category="course">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="img/certificates/fullstack.jpg" alt="Full Stack Course" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Full Stack Development</h4>
+            <p class="certificate-org">Currently Pursuing</p>
+            <span class="certificate-date">2024</span>
+          </div>
+        </div>
+      </div> -->
+      
+      <div class="col-md-4 certificate-item" data-category="course">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/Effective Leadership_page-0001.jpg" alt="Leadership Course" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Effective Leadership</h4>
+            <p class="certificate-org">HP FOUNDATION</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="course">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/AI For Beginners_page-0001.jpg" alt="AI Course" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>AI for Beginners</h4>
+            <p class="certificate-org">HP FOUNDATION</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="course">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/Business Email_page-0001.jpg" alt="Business Emails Course" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Business Emails</h4>
+            <p class="certificate-org">HP FOUNDATION</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Achievement Certificates -->
+      <div class="col-md-4 certificate-item" data-category="achievement">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/BACKEND.jpg" alt="Java Backend Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Java Backend Developer</h4>
+            <p class="certificate-org">TECHGIG</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="achievement">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/NEXT.jpg" alt="Talent Sprint Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Next Gen Talent Sprint</h4>
+            <p class="certificate-org">TECHGIG</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="achievement">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/QUIZ.jpg" alt="Quiz Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Quiz Participation</h4>
+            <p class="certificate-org">Internpe Thron</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 certificate-item" data-category="achievement">
+        <div class="certificate-box">
+          <div class="certificate-img">
+            <img src="certificates/SNOW.jpg" alt="Snowflake Certificate" class="img-fluid">
+          </div>
+          <div class="certificate-content">
+            <h4>Snowflake Data Lead Frame</h4>
+            <p class="certificate-org">TECHGIG</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--/ Portfolio Section Start /-->
+    <section id="work" class="portfolio-mf sect-pt4 route">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="title-box text-center">
+                <h3 class="title-a">
+                Projects
+                </h3>
+                <p class="subtitle-a">
+                Some of my recent work.
+                </p>
+                <div class="line-mf"></div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="work-box animate__animated animate__fadeInLeft">
+                        <a href="img/work-1.png" data-lightbox="gallery-mf">
+                            <div class="work-img">
+                                <img src="img/work-1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="work-content">
+                                <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Permutation & Combination Quiz</h2>
+                                    <div class="w-more">
+                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">2024</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                    <span class="ion-ios-plus-outline"></span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box animate__animated animate__fadeInUp">
+                  <a href="img/work-2.png" data-lightbox="gallery-mf">
+                    <div class="work-img">
+                      <img src="img/work-2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="work-content">
+                      <div class="row">
+                        <div class="col-sm-8">
+                            <h2 class="w-title">Google Drive Upload<br>using Spring Boot</h2>
+                          <div class="w-more">
+                            <span class="w-ctegory">Web Development</span> / <span class="w-date">2025</span>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="w-like">
+                            <span class="ion-ios-plus-outline"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+            <div class="col-md-4">
+                <div class="work-box animate__animated animate__fadeInRight">
+                  <a href="img/work-3.png" data-lightbox="gallery-mf">
+                    <div class="work-img">
+                      <img src="img/work-3.png" alt="Contact Management" class="img-fluid">
+                    </div>
+                    <div class="work-content">
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <h2 class="w-title">Contact Manager (Python + Tkinter)</h2>
+                          <div class="w-more">
+                            <span class="w-ctegory">Desktop App</span> / <span class="w-date">2025</span>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="w-like">
+                            <span class="ion-ios-plus-outline"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+            <!-- Add more projects here -->
+        </div>
+        </div>
+    </section>
+    <!--/ Portfolio Section End /-->
+
+<!-- Contact Section with Unique Class Names -->
+<section id="tholk-contact" class="tholk-contact-section">
+  <div class="tholk-bg-image"></div>
+  <div class="tholk-overlay"></div>
+  
+  <div class="container">
+    <div class="tholk-contact-wrapper">
+      <div class="tholk-contact-header text-center">
+        <h2 class="tholk-contact-title">Connect With Me</h2>
+        <div class="tholk-divider"></div>
+        <p class="tholk-intro-text">
+          Whether you have an exciting project, a tech query, or just want to connect, 
+          I'm all ears! Let's collaborate and build something amazing together.
+        </p>
+      </div>
+
+      <div class="tholk-contact-grid">
+        <!-- Phone -->
+        <div class="tholk-contact-card">
+          <div class="tholk-contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="tholk-contact-details">
+            <h3 class="tholk-card-title">Phone</h3>
+            <a href="tel:+916380161503" class="tholk-contact-link">+91 6380161503</a>
+          </div>
+        </div>
+        
+        <!-- Email -->
+        <div class="tholk-contact-card">
+          <div class="tholk-contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="tholk-contact-details">
+            <h3 class="tholk-card-title">Email</h3>
+            <a href="mailto:jtkappiyan2003@gmail.com" class="tholk-contact-link">jtkappiyan2003@gmail.com</a>
+          </div>
+        </div>
+        
+        <!-- Availability -->
+        <div class="tholk-contact-card">
+          <div class="tholk-contact-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="tholk-contact-details">
+            <h3 class="tholk-card-title">Availability</h3>
+            <p class="tholk-contact-text">Available for Freelance Work</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tholk-social-section">
+        <div class="tholk-social-links">
+          <a href="https://www.linkedin.com/in/tholkappiyan-j-573227325/" target="_blank" class="tholk-social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/12MgsccEHjM/" target="_blank" class="tholk-social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/itsrolex_tj" target="_blank" class="tholk-social-icon x-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/_its_jk__?igsh=d2NkdjJ6cG4yenN4" target="_blank" class="tholk-social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="copyright-box">
+                <p class="copyright">&copy; 2025 <strong>Tholkappiyan</strong>.All Rights Reserved</p>
+                <div class="credits">
+                Designed by <a href="#">Tholkappiyan.J</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+<!-- Custom CSS with Unique Class Names -->
+<style>
+  /* Base Styles */
+  .tholk-contact-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 0;
+    color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .tholk-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+  
+  .tholk-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+  
+  /* Content Styles */
+  .tholk-contact-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 40px 0;
+  }
+  
+  .tholk-contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .tholk-divider {
+    width: 60px;
+    height: 3px;
+    background: #4e9af1;
+    margin: 0 auto 25px;
+  }
+  
+  .tholk-intro-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+  
+  /* Contact Cards */
+  .tholk-contact-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .tholk-contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .tholk-contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tholk-contact-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(78, 154, 241, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: #4e9af1;
+  }
+  
+  .tholk-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .tholk-contact-link, 
+  .tholk-contact-text {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .tholk-contact-link:hover {
+    color: #6e45e2;
+  }
+  
+  /* Social Section */
+  .tholk-social-section {
+    margin-top: 50px;
+  }
+  
+  .tholk-social-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .tholk-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tholk-social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .tholk-social-icon:hover {
+    background: #4e9af1;
+    transform: scale(1.1);
+  }
+  
+      /* X icon specific styling */
+    .x-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .x-icon svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: currentColor;
+    }
+
+    /* Optional: Different hover color for X icon */
+    .x-icon:hover {
+      background: #4e9af1!important; /* X app's black color */
+    }
+  /* Footer */
+  .tholk-footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .tholk-contact-grid {
+      gap: 20px;
+    }
+    
+    .tholk-contact-card {
+      width: 280px;
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tholk-contact-section {
+      min-height: auto;
+      padding: 60px 0;
+    }
+    
+    .tholk-contact-title {
+      font-size: 2rem;
+    }
+    
+    .tholk-contact-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tholk-contact-card {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .tholk-contact-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tholk-contact-title {
+      font-size: 1.8rem;
+    }
+    
+    .tholk-intro-text {
+      font-size: 1rem;
+    }
+    
+    .tholk-social-links {
+      gap: 15px;
+    }
+    
+    .tholk-social-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 1rem;
+    }
+  }
+</style>
+</body>
+</html>
+
+  
