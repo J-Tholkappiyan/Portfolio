@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Typed.js initialization (if you're using it)
   if (typeof Typed !== 'undefined') {
     new Typed("#typed", {
-      strings: ["Web Developer", "Tech Enthusiast", "Problem Solver"],
+      strings: ["AI Researcher", "Full Stack Developer", "Technology Innovator"],
       typeSpeed: 100,
-      backSpeed: 60,
+      backSpeed: 100,
       loop: true,
       cursorChar: "|",
       backDelay: 1500
@@ -239,3 +239,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
