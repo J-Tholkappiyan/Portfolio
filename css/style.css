@@ -769,7 +769,7 @@ footer .credits a,
 .certificate-org,
 .certificate-date,
 #theme-toggle {
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -784,7 +784,7 @@ footer .credits a,
     --navbar-bg: #9fa4a8a1;
     --navbar-link-color: #070000;
     --navbar-active-link-color: #6e45e2;
-    --intro-overlay-bg: rgba(0, 0, 0, 0.6); /* Overlay for intro background image */
+    --intro-overlay-bg: rgba(0, 0, 0, 0.3); /* Overlay for intro background image */
     --intro-title-color: #fff;
     --intro-subtitle-color: rgba(255,255,255,0.9);
     --box-shadow-full-bg: #9aa0a6a1; /* About section & Contact form card background */
@@ -808,6 +808,33 @@ footer .credits a,
     --section-bg-secondary: #f0f0f0; /* A slightly lighter shade for distinction */
 }
 
+
+body.dark-mode .skill-item {
+    background: var(--skill-item-bg) !important;
+}
+
+body.dark-mode .skill-item span {
+    color: #ffffff !important;
+}
+
+body.dark-mode .skill-item:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+}
+
+.service-box {
+    cursor: pointer !important;
+}
+
+.service-box:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+body.dark-mode .service-box:hover {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15) !important;
+}
+
 /* Dark Mode Colors (Overrides for when body has 'dark-mode' class) */
 body.dark-mode {
     --body-bg: #1a1a1a; /* Main background: A slightly lighter dark grey */
@@ -821,7 +848,7 @@ body.dark-mode {
     --navbar-active-link-color: #90caf9; /* Navbar active/underline: Accent blue */
     
     /* --- IMPORTANT CHANGE HERE --- */
-    --intro-overlay-bg: rgba(0, 0, 0, 0.5); /* Adjusted to 50% opacity for a much brighter underlying image */
+    --intro-overlay-bg: rgba(0, 0, 0, 0.4); /* Adjusted to 50% opacity for a much brighter underlying image */
     --intro-title-color: #f0f0f0;
     --intro-subtitle-color: rgba(255,255,255,0.85); /* Subtitle slightly brighter for contrast */
     
